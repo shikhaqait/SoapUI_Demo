@@ -1,0 +1,25 @@
+image: maven:latest
+
+variables:
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+ 
+cache:
+  paths:
+    - .m2/repository/
+    - target/
+stages:
+  - Test
+Run_Soap_Test:
+  #before_script:
+    #- apt-get update
+  stage: Test
+  script:
+    - mvn clean site
+  after_script:
+#    - mkdir ./Results
+#    - cp -rf ../AutomationResults ./Results
+  artifacts:
+    when: always
+    paths:
+     - ./target
+    expire_in: 1 week

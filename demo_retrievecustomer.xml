@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="ace9c0a7-5b85-476c-9a09-757204e3c07f" activeEnvironment="Default" name="RetrieveCustomerEndPoint" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" resourceRoot="" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="TestSuiteForRetrieveCustomer"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="VerifyStatus"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:RestService" id="8fea5eaa-b2a3-435d-8bd6-81bac04e5352" wadlVersion="http://wadl.dev.java.net/2009/02" name="ServiceNSW" type="rest" basePath="/rms/v1/link/soaservice/pqa/mock/TCS_RetrieveCustomer-mediation_v1_0_0Web/sca/RetrieveCustomer_SOAP_Exp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://${#Project#ServerEndPoint}</con:endpoint></con:endpoints><con:resource name="RetrieveCustomerAPI" path="" id="d993a5fc-2fe6-4a81-8743-5e1d298bb245"><con:settings/><con:parameters><con:parameter><con:name>apikey</con:name><con:value>${#Project#APIKey}</con:value><con:style>QUERY</con:style><con:default>${#Project#APIKey}</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>Content-Type</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="RetrieveCustomer" id="02c06ea3-a11a-4dd0-9cd9-475c56ecbf72" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>text/xml</con:mediaType><con:params/><con:element xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">soapenv:Envelope</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>text/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">soapenv:Envelope</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/plain</con:mediaType><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>500 404 401</con:status><con:params/><con:element xmlns:ret="https://api-lt.g.testservicensw.net/rms/v1/link/soaservice/pqa/mock/TCS_RetrieveCustomer-mediation_v1_0_0Web/sca/RetrieveCustomer_SOAP_Exp">ret:Fault</con:element></con:representation><con:request name="RetrieveCustomerRequest" id="5f736c0c-18d7-4cad-b320-8a3db248eb35" mediaType="text/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://${#Project#ServerEndPoint}</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <wsse:Security soap:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+            <wsu:Timestamp>
+                <wsu:Created>2019-10-08T03:09:50.122096962Z</wsu:Created>
+                <wsu:Expires>2019-10-08T03:14:50.122Z</wsu:Expires>
+            </wsu:Timestamp>
+            <wsse:UsernameToken>
+                <wsse:Username>snswwsbind</wsse:Username>
+                <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Snsw2Rms</wsse:Password>
+            </wsse:UsernameToken>
+        </wsse:Security>
+        <rms:msgContext xmlns:rms="http://transport.nsw.gov.au/rms">
+            <msgSolution>SNSWServices</msgSolution>
+            <msgCorrelationID>f120b22b-63b8-4ac9-a3a8-db53c98a7039</msgCorrelationID>
+            <msgTimestamp>2019-10-08T14:09:50.031+11:00</msgTimestamp>
+        </rms:msgContext>
+    </soap:Header>
+    <soap:Body>
+        <ns0:getPerson xmlns:ns0="urn:xml-gov-au:nsw:rms:svc:data:customer:retrieve:v2">
+            <ns0:CustomerID>151641430</ns0:CustomerID>
+        </ns0:getPerson>
+    </soap:Body>
+</soap:Envelope>]]></con:request><con:originalUri>https://api-lt.g.testservicensw.net/rms/v1/link/soaservice/pqa/mock/TCS_RetrieveCustomer-mediation_v1_0_0Web/sca/RetrieveCustomer_SOAP_Exp</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="Content-Type" value="text/xml" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>apikey</con:entry><con:entry>Content-Type</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="de25b9ef-443e-49f6-9288-e878f99a55ca" name="TestSuiteForRetrieveCustomer"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="faadfe35-feb0-43ec-8323-feaf419cb401" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="VerifyStatusWithValidToken" searchProperties="true"><con:settings/><con:testStep type="groovy" name="SetProjectLevelData" id="dfbb61fa-8d76-4d6b-9db6-1388a09d395e"><con:settings/><con:config><script>def groovyUtils = new com.eviware.soapui.support.GroovyUtils(context)
+def projectPath = new com.eviware.soapui.support.GroovyUtils(context).projectPath //gets the path of the project root
+log.info projectPath
+def csvFilePath = projectPath+File.separator+'data'+File.separator+'GlobalProperties.properties'
+log.info csvFilePath
+context.fileReader = new BufferedReader(new FileReader(csvFilePath))
+rowsData = context.fileReader.readLines()
+for(int i=0;i&lt;rowsData.size();i++){
+	String[] data = rowsData[i].split('=')
+	log.info data[0]
+	testRunner.testCase.testSuite.project.setPropertyValue(data[0],data[1])
+}</script></con:config></con:testStep><con:testStep type="groovy" name="SetSuiteLevelData" id="d021e0bf-6db1-4ccf-96b5-9e4078e4aa94"><con:settings/><con:config><script>def groovyUtils = new com.eviware.soapui.support.GroovyUtils(context)
+def projectPath = new com.eviware.soapui.support.GroovyUtils(context).projectPath //gets the path of the project root
+log.info projectPath
+def csvFilePath = projectPath+File.separator+'data'+File.separator+'TestSuiteData.properties'
+log.info csvFilePath
+context.fileReader = new BufferedReader(new FileReader(csvFilePath))
+rowsData = context.fileReader.readLines()
+for(int i=0;i&lt;rowsData.size();i++){
+	String[] data = rowsData[i].split('=')
+	log.info data[0]
+	testRunner.testCase.testSuite.setPropertyValue(data[0],data[1])
+}</script></con:config></con:testStep><con:testStep type="groovy" name="TestCase1_SetData" id="21fa35ad-1bcd-4505-92ec-f1fb0de158f4"><con:settings/><con:config><script>def groovyUtils = new com.eviware.soapui.support.GroovyUtils(context)
+def projectPath = new com.eviware.soapui.support.GroovyUtils(context).projectPath //gets the path of the project root
+log.info projectPath
+def csvFilePath = projectPath+File.separator+'data'+File.separator+'RetrieveCustomerTestCaseData.csv'
+log.info csvFilePath
+context.fileReader = new BufferedReader(new FileReader(csvFilePath))
+rowsData = context.fileReader.readLines()
+int rowsize = rowsData.size()
+rowdata = rowsData[1]
+String[] data = rowdata.split(',')
+log.info data[0]
+testRunner.testCase.setPropertyValue("CustomerID",data[1])
+log.info "CustomerID"+"="+data[1]
+testRunner.testCase.setPropertyValue("UserName",data[2])
+log.info "UserName"+"="+data[2]
+testRunner.testCase.setPropertyValue("Password",data[3])
+log.info "Password"+"="+data[3]
+</script></con:config></con:testStep><con:testStep type="restrequest" name="Request" id="3585dcbb-2130-42f1-a15f-a7a5aa90799d"><con:settings/><con:config service="ServiceNSW" resourcePath="/rms/v1/link/soaservice/pqa/mock/TCS_RetrieveCustomer-mediation_v1_0_0Web/sca/RetrieveCustomer_SOAP_Exp" methodName="RetrieveCustomer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Request" id="5f736c0c-18d7-4cad-b320-8a3db248eb35" mediaType="text/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://${#Project#ServerEndPoint}</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <wsse:Security soap:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+            <wsu:Timestamp>
+                <wsu:Created>2019-10-08T03:09:50.122096962Z</wsu:Created>
+                <wsu:Expires>2019-10-08T03:14:50.122Z</wsu:Expires>
+            </wsu:Timestamp>
+            <wsse:UsernameToken>
+                <wsse:Username>${#TestCase#UserName}</wsse:Username>
+                <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">${#TestCase#Password}</wsse:Password>
+            </wsse:UsernameToken>
+        </wsse:Security>
+        <rms:msgContext xmlns:rms="http://transport.nsw.gov.au/rms">
+            <msgSolution>SNSWServices</msgSolution>
+            <msgCorrelationID>f120b22b-63b8-4ac9-a3a8-db53c98a7039</msgCorrelationID>
+            <msgTimestamp>2019-10-08T14:09:50.031+11:00</msgTimestamp>
+        </rms:msgContext>
+    </soap:Header>
+    <soap:Body>
+        <ns0:getPerson xmlns:ns0="urn:xml-gov-au:nsw:rms:svc:data:customer:retrieve:v2">
+            <ns0:CustomerID>${#TestCase#CustomerID}</ns0:CustomerID>
+        </ns0:getPerson>
+    </soap:Body>
+</soap:Envelope>]]></con:request><con:originalUri>https://api-lt.g.testservicensw.net/rms/v1/link/soaservice/pqa/mock/TCS_RetrieveCustomer-mediation_v1_0_0Web/sca/RetrieveCustomer_SOAP_Exp</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="75b9e81a-85c6-4638-83c0-13f95a2368fd" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="c0ca3f8c-df9a-4ee5-82ce-29b6ddbb5834" name="Contains"><con:configuration><token/><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="7d077cd6-aa4c-4b47-8ded-060f1dd49320" name="Script Assertion"><con:configuration><scriptText>import com.eviware.soapui.support.XmlHolder
+def holder = new XmlHolder( messageExchange.responseContentAsXml )
+
+assert holder["//out8:CustomerID"] != null</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="apikey" value="YEGGznxcJbi2lOuYyAdRsOwuRc3l5FGF"/>
+  <con:entry key="Content-Type" value="text/xml"/>
+</con:parameters><con:parameterOrder><con:entry>apikey</con:entry><con:entry>Content-Type</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>CustomerID</con:name><con:value>151641430</con:value></con:property><con:property><con:name>IsSuppressed</con:name><con:value>false</con:value></con:property><con:property><con:name>UserName</con:name><con:value>snswwsbind</con:value></con:property><con:property><con:name>Password</con:name><con:value>Snsw2Rms</con:value></con:property></con:properties></con:testCase><con:testCase id="16679272-95ef-4a9a-b4e3-102044982106" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="VerifyStatusWithInvalidToken" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="REST Request" id="e20af0cb-971c-41c5-9dbc-2ce51b744c27"><con:settings/><con:config service="ServiceNSW" resourcePath="/rms/v1/link/soaservice/pqa/mock/TCS_RetrieveCustomer-mediation_v1_0_0Web/sca/RetrieveCustomer_SOAP_Exp" methodName="RetrieveCustomer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="5f736c0c-18d7-4cad-b320-8a3db248eb35" mediaType="text/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://${#Project#ServerEndPoint}</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <wsse:Security soap:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+            <wsu:Timestamp>
+                <wsu:Created>2019-10-08T03:09:50.122096962Z</wsu:Created>
+                <wsu:Expires>2019-10-08T03:14:50.122Z</wsu:Expires>
+            </wsu:Timestamp>
+            <wsse:UsernameToken>
+                <wsse:Username>snswwsbind</wsse:Username>
+                <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Snsw2Rms</wsse:Password>
+            </wsse:UsernameToken>
+        </wsse:Security>
+        <rms:msgContext xmlns:rms="http://transport.nsw.gov.au/rms">
+            <msgSolution>SNSWServices</msgSolution>
+            <msgCorrelationID>f120b22b-63b8-4ac9-a3a8-db53c98a7039</msgCorrelationID>
+            <msgTimestamp>2019-10-08T14:09:50.031+11:00</msgTimestamp>
+        </rms:msgContext>
+    </soap:Header>
+    <soap:Body>
+        <ns0:getPerson xmlns:ns0="urn:xml-gov-au:nsw:rms:svc:data:customer:retrieve:v2">
+            <ns0:CustomerID>151641430</ns0:CustomerID>
+        </ns0:getPerson>
+    </soap:Body>
+</soap:Envelope>]]></con:request><con:originalUri>https://api-lt.g.testservicensw.net/rms/v1/link/soaservice/pqa/mock/TCS_RetrieveCustomer-mediation_v1_0_0Web/sca/RetrieveCustomer_SOAP_Exp</con:originalUri><con:assertion type="Simple Contains" id="d4f5cce4-fa6c-46f2-bddc-25e84029c161" name="Contains"><con:configuration><token>InvalidAPIKey</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="apikey" value="${#TestSuite#InvalidToken}"/>
+  <con:entry key="Content-Type" value="text/xml"/>
+</con:parameters><con:parameterOrder><con:entry>apikey</con:entry><con:entry>Content-Type</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="0faeec3a-cb97-4599-9913-951d2fd4f592" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="VerifyResponseWithoutCustomerId" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Case2_SetTestCaseData" id="4e5307ca-075a-4bbf-aa91-0e87a0b16a20"><con:settings/><con:config><script>def groovyUtils = new com.eviware.soapui.support.GroovyUtils(context)
+def projectPath = new com.eviware.soapui.support.GroovyUtils(context).projectPath //gets the path of the project root
+log.info projectPath
+def csvFilePath = projectPath+File.separator+'data'+File.separator+'RetrieveCustomerTestCaseData.csv'
+log.info csvFilePath
+context.fileReader = new BufferedReader(new FileReader(csvFilePath))
+rowsData = context.fileReader.readLines()
+int rowsize = rowsData.size()
+rowdata = rowsData[2]
+String[] data = rowdata.split(',')
+log.info data[0]
+testRunner.testCase.setPropertyValue("CustomerID",data[1])
+log.info "CustomerID"+"="+data[1]
+testRunner.testCase.setPropertyValue("UserName",data[2])
+log.info "UserName"+"="+data[2]
+testRunner.testCase.setPropertyValue("Password",data[3])
+log.info "Password"+"="+data[3]</script></con:config></con:testStep><con:testStep type="restrequest" name="GetCustomer" id="965e55f3-e9c7-45c1-84ff-2c4618a2a9bc"><con:settings/><con:config service="ServiceNSW" resourcePath="/rms/v1/link/soaservice/pqa/mock/TCS_RetrieveCustomer-mediation_v1_0_0Web/sca/RetrieveCustomer_SOAP_Exp" methodName="RetrieveCustomer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetCustomer" id="5f736c0c-18d7-4cad-b320-8a3db248eb35" mediaType="text/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://${#Project#ServerEndPoint}</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <wsse:Security soap:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+            <wsu:Timestamp>
+                <wsu:Created>2019-10-08T03:09:50.122096962Z</wsu:Created>
+                <wsu:Expires>2019-10-08T03:14:50.122Z</wsu:Expires>
+            </wsu:Timestamp>
+            <wsse:UsernameToken>
+                <wsse:Username>${#TestCase#UserName}</wsse:Username>
+                <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">${#TestCase#Password}</wsse:Password>
+            </wsse:UsernameToken>
+        </wsse:Security>
+        <rms:msgContext xmlns:rms="http://transport.nsw.gov.au/rms">
+            <msgSolution>SNSWServices</msgSolution>
+            <msgCorrelationID>f120b22b-63b8-4ac9-a3a8-db53c98a7039</msgCorrelationID>
+            <msgTimestamp>2019-10-08T14:09:50.031+11:00</msgTimestamp>
+        </rms:msgContext>
+    </soap:Header>
+    <soap:Body>
+        <ns0:getPerson xmlns:ns0="urn:xml-gov-au:nsw:rms:svc:data:customer:retrieve:v2">
+            <ns0:CustomerID>${#TestCase#CustomerID}</ns0:CustomerID>
+        </ns0:getPerson>
+    </soap:Body>
+</soap:Envelope>]]></con:request><con:originalUri>https://api-lt.g.testservicensw.net/rms/v1/link/soaservice/pqa/mock/TCS_RetrieveCustomer-mediation_v1_0_0Web/sca/RetrieveCustomer_SOAP_Exp</con:originalUri><con:assertion type="Simple Contains" id="573c7f4a-aaeb-481d-958b-80800be2eec3" name="Contains"><con:configuration><token>Customer ID is not set</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="Content-Type" value="text/xml" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>apikey</con:entry><con:entry>Content-Type</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>CustomerID</con:name><con:value>12132edfds</con:value></con:property><con:property><con:name>IsSuppressed</con:name><con:value>false</con:value></con:property><con:property><con:name>UserName</con:name><con:value>snswwsbind</con:value></con:property><con:property><con:name>Password</con:name><con:value>Snsw2Rms</con:value></con:property></con:properties></con:testCase><con:testCase id="eaf977d1-2bd0-44ae-90a6-32d16441ea77" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="VerifyCustomerInformation" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Case3_TestCaseData" id="33802eea-6d2b-4a7b-8976-40d36bd63fa2"><con:settings/><con:config><script>def groovyUtils = new com.eviware.soapui.support.GroovyUtils(context)
+def projectPath = new com.eviware.soapui.support.GroovyUtils(context).projectPath //gets the path of the project root
+log.info projectPath
+def csvFilePath = projectPath+File.separator+'data'+File.separator+'RetrieveCustomerTestCaseData.csv'
+log.info csvFilePath
+context.fileReader = new BufferedReader(new FileReader(csvFilePath))
+rowsData = context.fileReader.readLines()
+int rowsize = rowsData.size()
+rowdata = rowsData[3]
+String[] data = rowdata.split(',')
+log.info data[0]
+testRunner.testCase.setPropertyValue("CustomerID",data[1])
+log.info "CustomerID"+"="+data[1]
+testRunner.testCase.setPropertyValue("UserName",data[2])
+log.info "UserName"+"="+data[2]
+testRunner.testCase.setPropertyValue("Password",data[3])
+log.info "Password"+"="+data[3]
+testRunner.testCase.setPropertyValue("GivenName",data[4])
+log.info "GivenName"+"="+data[4]
+testRunner.testCase.setPropertyValue("FamilyName",data[5])
+log.info "FamilyName"+"="+data[5]
+testRunner.testCase.setPropertyValue("Email",data[6])
+log.info "Email"+"="+data[6]
+</script></con:config></con:testStep><con:testStep type="restrequest" name="GetCustomer" id="62dee16f-7b4a-4bdf-bec6-943a6cee4787"><con:settings/><con:config service="ServiceNSW" resourcePath="/rms/v1/link/soaservice/pqa/mock/TCS_RetrieveCustomer-mediation_v1_0_0Web/sca/RetrieveCustomer_SOAP_Exp" methodName="RetrieveCustomer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetCustomer" id="5f736c0c-18d7-4cad-b320-8a3db248eb35" mediaType="text/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://${#Project#ServerEndPoint}</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Header>
+        <wsse:Security soap:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+            <wsu:Timestamp>
+                <wsu:Created>2019-10-08T03:09:50.122096962Z</wsu:Created>
+                <wsu:Expires>2019-10-08T03:14:50.122Z</wsu:Expires>
+            </wsu:Timestamp>
+            <wsse:UsernameToken>
+                <wsse:Username>${#TestCase#UserName}</wsse:Username>
+                <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">${#TestCase#Password}</wsse:Password>
+            </wsse:UsernameToken>
+        </wsse:Security>
+        <rms:msgContext xmlns:rms="http://transport.nsw.gov.au/rms">
+            <msgSolution>SNSWServices</msgSolution>
+            <msgCorrelationID>f120b22b-63b8-4ac9-a3a8-db53c98a7039</msgCorrelationID>
+            <msgTimestamp>2019-10-08T14:09:50.031+11:00</msgTimestamp>
+        </rms:msgContext>
+    </soap:Header>
+    <soap:Body>
+        <ns0:getPerson xmlns:ns0="urn:xml-gov-au:nsw:rms:svc:data:customer:retrieve:v2">
+            <ns0:CustomerID>${#TestCase#CustomerID}</ns0:CustomerID>
+        </ns0:getPerson>
+    </soap:Body>
+</soap:Envelope>]]></con:request><con:originalUri>https://api-lt.g.testservicensw.net/rms/v1/link/soaservice/pqa/mock/TCS_RetrieveCustomer-mediation_v1_0_0Web/sca/RetrieveCustomer_SOAP_Exp</con:originalUri><con:assertion type="GroovyScriptAssertion" id="9509c229-4fcd-4983-8d1e-3c262dae7fa2" name="ValidateCustomerID"><con:configuration><scriptText>import com.eviware.soapui.support.XmlHolder
+def holder = new XmlHolder( messageExchange.responseContentAsXml )
+assert holder["//out8:CustomerID"] == context.expand( '${#TestCase#CustomerID}' )
+</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="978538d8-60e1-4ea0-a5a1-ca9b5f85d3bb" name="ValidateFamilyName"><con:configuration><scriptText>import com.eviware.soapui.support.XmlHolder
+def holder = new XmlHolder( messageExchange.responseContentAsXml )
+assert holder["//out8:Name//out8:FamilyName"] == context.expand( '${#TestCase#FamilyName}' )
+</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="d25ac94d-b212-48e8-ad5c-66606df65505" name="VallidateGivenName"><con:configuration><scriptText>import com.eviware.soapui.support.XmlHolder
+def holder = new XmlHolder( messageExchange.responseContentAsXml )
+assert holder["//out8:Name//out8:GivenName"] == context.expand( '${#TestCase#GivenName}' )
+</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="86d72d4e-daa0-41a7-be69-f80af6f8a9de" name="ValidateEmail"><con:configuration><scriptText>import com.eviware.soapui.support.XmlHolder
+def holder = new XmlHolder( messageExchange.responseContentAsXml )
+assert holder["//out8:ContactDetail//out8:Category[contains(text(), 'Email')]//following-sibling::out8:ContactValue"] == context.expand( '${#TestCase#Email}' )
+</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="Content-Type" value="text/xml" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>apikey</con:entry><con:entry>Content-Type</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>CustomerID</con:name><con:value>151641430</con:value></con:property><con:property><con:name>IsSuppressed</con:name><con:value>false</con:value></con:property><con:property><con:name>UserName</con:name><con:value>snswwsbind</con:value></con:property><con:property><con:name>Password</con:name><con:value>Snsw2Rms</con:value></con:property><con:property><con:name>GivenName</con:name><con:value>TC009TOSCAP6NGLFR</con:value></con:property><con:property><con:name>FamilyName</con:name><con:value>SNSWRENEWCONDREGOLVAPI</con:value></con:property><con:property><con:name>Email</con:name><con:value>snsw.reg@testblackhole.com.au</con:value></con:property></con:properties></con:testCase><con:properties><con:property><con:name>token</con:name><con:value>YEGGznxcJbi2lOuYyAdRsOwuRc3l5FGF</con:value></con:property><con:property><con:name>InvalidToken</con:name><con:value>testfdfsdfds</con:value></con:property><con:property><con:name>APIKey</con:name><con:value>fdfdsfds</con:value></con:property><con:property><con:name>ServerEndPoint</con:name><con:value>api-lt.g.testservicensw.net</con:value></con:property></con:properties></con:testSuite><con:properties><con:property><con:name>ServerEndPoint</con:name><con:value>api-lt.g.testservicensw.net</con:value></con:property><con:property><con:name>APIKey</con:name><con:value>fdfdsfds</con:value></con:property></con:properties><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

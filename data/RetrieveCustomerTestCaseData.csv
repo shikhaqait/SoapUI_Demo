@@ -1,0 +1,4 @@
+TestCaseNumber,CustomerID,UserName,Password,GivenName,FamilyName,Email
+Case1,151641430,snswwsbind,Snsw2Rms
+Case2,12132edfds,snswwsbind,Snsw2Rms
+Case3,151641430,snswwsbind,Snsw2Rms,TC009TOSCAP6NGLFR,SNSWRENEWCONDREGOLVAPI,snsw.reg@testblackhole.com.au
